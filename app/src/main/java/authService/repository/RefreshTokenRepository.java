@@ -1,6 +1,6 @@
-package org.example.repository;
+package authService.repository;
 
-import org.example.entities.RefreshTokens;
+import authService.entities.RefreshTokens;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

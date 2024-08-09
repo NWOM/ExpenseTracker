@@ -1,6 +1,6 @@
-package org.example.repository;
+package authService.repository;
 
-import org.example.entities.UserInfo;
+import authService.entities.UserInfo;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<UserInfo,Long>{

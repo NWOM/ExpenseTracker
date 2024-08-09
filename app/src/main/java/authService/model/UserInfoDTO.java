@@ -1,8 +1,8 @@
-package org.example.model;
+package authService.model;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import org.example.entities.UserInfo;
+import authService.entities.UserInfo;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class UserInfoDTO extends UserInfo {
     private String userName;

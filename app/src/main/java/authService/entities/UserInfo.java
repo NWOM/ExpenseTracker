@@ -1,4 +1,4 @@
-package org.example.entities;
+package authService.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.Set;
 
 @Entity
