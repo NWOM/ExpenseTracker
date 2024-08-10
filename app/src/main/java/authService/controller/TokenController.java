@@ -17,7 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@AllArgsConstructor
+
 @Controller
 public class TokenController {
     @Autowired
@@ -45,7 +45,7 @@ public class TokenController {
                 .map(refreshTokenService::verifyExpiration)
                 .map(RefreshTokens::getUserInfo)
                 .map(userInfo -> {
-                    String acessToken= jwtService.GenerateToken(userInfo.getUserName());
+                    String acessToken= jwtService.GenerateToken(userInfo.getUsername());
                     return JwtResponseDTO.builder()
                             .accessToken(acessToken)
                             .token(refreshTokenRequestDTO.getToken()).build();

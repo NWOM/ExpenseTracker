@@ -49,7 +49,7 @@ public class UserDetailServiceImpl implements UserDetailsService
     }
 
     public UserInfo checkIfUserAlreadyExist(UserInfoDTO userInfoDto){
-        return userRepository.findByUsername(userInfoDto.getUserName());
+        return userRepository.findByUsername(userInfoDto.getUsername());
     }
 
     public Boolean signupUser(UserInfoDTO userInfoDto){
@@ -59,7 +59,7 @@ public class UserDetailServiceImpl implements UserDetailsService
             return false;
         }
         String userId = UUID.randomUUID().toString();
-        userRepository.save(new UserInfo(userId, userInfoDto.getUserName(), userInfoDto.getPassword(), new HashSet<>()));
+        userRepository.save(new UserInfo(userId, userInfoDto.getUsername(), userInfoDto.getPassword(), new HashSet<>()));
         // pushEventToQueue
         return true;
     }
